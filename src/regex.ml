@@ -267,7 +267,7 @@ module Stable = struct
       include%template Sexpable.Of_stringable.V1 [@alloc stack] (T)
 
       [%%template
-      [@@@alloc a @ m = (stack @ local, heap @ global)]
+      [@@@alloc a @ m = (stack_local, heap @ global)]
 
       let[@mode m] compare t1 t2 =
         (String.V1.compare [@mode m])
